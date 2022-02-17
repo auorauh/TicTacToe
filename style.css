@@ -33,6 +33,13 @@ body {
 	background-color: #8BC6EC;
 	background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
 	text-align: center;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-family: monospace;
+	flex-direction: column;
 }
 ol, ul {
 	list-style: none;
@@ -54,5 +61,40 @@ table {
 	padding: 2rem;
 }
 .container {
-	width: 70vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+}
+.board {
+	display: grid;
+	grid-template-columns: 15rem 15rem 15rem;
+	grid-template-rows: 15rem 15rem 15rem;
+}
+.tile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 15rem;
+	border: 2px solid black;
+}
+.reset {
+	z-index: 1;
+	margin-bottom: 2rem;
+}
+.tile:first-child,
+.tile:nth-child(2),
+.tile:nth-child(3) {
+	border-top: none;
+}
+.tile:last-child,
+.tile:nth-child(8),
+.tile:nth-child(7) {
+	border-bottom: none;
+}
+.tile:nth-child( 3n +1) {
+	border-left: none;
+}
+.tile:nth-child( 3n +3) {
+	border-right: none;
 }
