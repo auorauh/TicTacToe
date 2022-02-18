@@ -77,14 +77,13 @@ const game = (() => {
             pcChoice = (gameBoard.children [choice]);
             limit++
             if (limit == 20) {
-                alert('PC "Rage Quit" Please Refesh')
+                alert('ERROR Please Refesh')
                 valid = true;
             }
         }
         pcChoice = (gameBoard.children [choice]);
         while(!valid){   
         if (pcChoice.innerText == 'x' || pcChoice.innerText == 'o' || gameTile.innerText == 'x' || gameTile.innerText == 'o'){
-            console.log(pcChoice)
             num();
         } else {
             valid = true;
